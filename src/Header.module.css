@@ -46,7 +46,6 @@
 .ul__list li:hover{
     cursor: pointer;
     color: var(--fg-base-default, #171717);
-    transition: .7s linear;
 }
 
 .lang__select{
@@ -67,9 +66,12 @@
 
 /* burger */
 
-.burger__container{ 
+.burger__container,
+.burger__container__active
+{ 
     display: none;
 }
+
 
 .burger__input {
     display: none;
@@ -200,6 +202,11 @@
     cursor: pointer;
 }
 
+.responsive__ul__list li:hover {
+    color: var(--fg-base-default, #171717);
+}   
+
+
 .responsive__ul__list li:last-child {
     margin: 0;
 }
@@ -252,6 +259,10 @@
     align-items: center;
 }
 
+.select__lang__inner *:hover{
+    cursor: pointer;
+}   
+
 .select__lang__inner input[type="radio"]{
     appearance: none;
     width: 20px;
@@ -298,15 +309,21 @@
         justify-content: center;
         align-items: center;
     }
-    .burger__container{
+  
+    .burger__container,
+    .burger__container__active{
         width: 24px;
         height: 24px;
         display: flex;
         justify-content: center;
         align-items: center;
         border-radius: 100%;
-    }
+    } 
 
+    .burger__container__active{
+        background-color: #F5F5F5;
+    }
+   
     .burger__input[type="checkbox"]:checked ~ .burger__container{
         background:  rgba(245, 245, 245, 1);
 

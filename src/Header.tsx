@@ -17,7 +17,7 @@ export default function Header() {
         <div className={Styles.header__inner}>
             <nav className={Styles.nav}>     
             <img src={logo} alt="logo" className={Styles.logo__img} /> 
-            <div className={Styles.burger__container}>
+            <div className={`${checked ? Styles.burger__container__active : Styles.burger__container }`}>
             <input id="burger" checked={checked} onChange={() => handleCheck()} className={Styles.burger__input} type="checkbox" />
               <label htmlFor="burger" className={Styles.burger__label}>
                    <span></span>
